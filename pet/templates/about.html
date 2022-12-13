@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dog or Cat Classification</title>
+	<link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.css">
+	<link rel="stylesheet" href="{% static "pet/css/style.css" %}">
+</head>
+<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+		  <a class="navbar-brand" href="/">
+			<div class="d-flex align-items-center">
+				<img width="32" height="32" class="mr-2" src="{% static "pet/images/logo.png" %}" alt="home" />
+				<span class="font-weight-bold">Dog-Cat Classifier</span>
+			</div>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarColor02">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/about">About</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+
+	  <section class="mt-5">
+		<div class="container"><div class="row justify-content-center mt-5"><div class="col"><span class="fw-bold">Dog-Cat Image Classification.</span> Image classification using artificial intelligence. Created by <span><a href="https://github.com/mirasrobert">Robert Miras</a></span></div></div></div>
+	  </section>
+
+	  <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

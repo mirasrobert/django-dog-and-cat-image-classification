@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dog or Cat Classification</title>
+	<link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.css">
+</head>
+<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+		  <a class="navbar-brand" href="/">
+			<div class="d-flex align-items-center">
+				<img width="32" height="32" class="mr-2" src="{% static "pet/images/logo.png" %}" alt="home" />
+				<span class="font-weight-bold">Dog-Cat Classifier</span>
+			</div>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarColor02">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/about">About</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+
+	  <section class="mt-5">
+		<div class="container">
+			<form id="myForm" action="check_image/" method="POST" enctype="multipart/form-data"> 
+				{% csrf_token %}
+		    	<div class="form-group">
+					<label for="formFile" class="form-label mt-4">Choose an Image of a Dog or Cat</label>
+					<input class="form-control" name="image" type="file" id="formFile" required>
+			  	</div>
+				  <div class="form-group mt-3">
+					<button class="btn btn-primary w-100 py-3" id="submit-btn">
+						<span id="btn-text">Predict Image</span>
+					</button>
+				  </div>
+			</form>
+		</div>
+	  </section>
+	  <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
