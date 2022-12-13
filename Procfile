@@ -1,0 +1,1 @@
+web: gunicorn petclassification.wsgi --log-file -
