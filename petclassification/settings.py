@@ -28,6 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# For deployment
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-pet-classification-production.up.railway.app'
+]
+
 
 # Application definition
 
